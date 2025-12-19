@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Juan Salazar Instagram Photo Feed con Bootstrap</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light p-3">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <div>
+                <span class="fs-5 align-middle"><i
+                        class="fa-brands fa-instagram fs-4 align-middle"></i><b>Instagram</b></span>
+            </div>
+
+
+            <div class="d-flex align-items-center gap-3">
+
+                <!--Create a new post-->
+                <button type="button" class="btn btn-success justify-content-end " data-bs-toggle="modal"
+                    data-bs-target="#exampleModal" data-bs-whatever="@mdo">Create a new post</button>
+
+                <!-- Drop down-->
+                <div class="dropdown">
+
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-gear"></i>
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                        <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <!--modal-->
+
+    <div class=" d-flex justify-content-end gap-4">
+
+        <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label">Caption:</label>
+
+                                <textarea class="form-control" id="message-text"
+                                    placeholder="add the caption of your post here"></textarea>
+
+                            </div>
+                            <div class="mt-3">
+                                <button class="btn btn-light border"><i class="fa-solid fa-camera"></i></button>
+                                <button class="btn btn-light border"><i class="fa-solid fa-location-dot"></i></button>
+
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success">Publish</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Feed de instagram-->
+
+    <ul class="nav nav justify-content-center mb-4" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active mt-5 mb-5" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i
+                    class="fa-solid fa-bars"></i></button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link mt-5 mb-5" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i
+                    class="fa-solid fa-table-cells"></i></button>
+        </li>
+
+    </ul>
+
+    <!--Vertical-->
+
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+            <!--inicio tarjeta 1-->
+            <div class="container d-flex justify-content-center">
+                <div class="card mb-4" style="max-width: 600px; width: 100%;">
+
+
+                    <div class="d-flex justify-content-between">
+                        <h5 class="p-3">My Crazy dog Spark!</h5>
+                        <span class="p-3">08/26</span>
+                    </div>
+
+                    <div class="mt-2">
+                        <img src="https://plus.unsplash.com/premium_photo-1723514553579-b589437b3b06?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZG9nJTIwc3F1YXJlfGVufDB8MnwwfHx8MA%3D%3D"
+                            alt="Dog image" class="img-fluid w-100">
+
+                        <div class="card-body pt-2">
+                            <span><b>204 Likes</b></span><br>
+                            <span>This is an example of a very good photo that you can post on instagram</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--inicio tarjeta 2-->
+            <div class="container d-flex justify-content-center">
+                <div class="card mb-4" style="max-width: 600px; width: 100%;">
+
+
+                    <div class="d-flex justify-content-between">
+                        <h5 class="p-3">The greatness of Croatia</h5>
+                        <span class="p-3">04/09</span>
+                    </div>
+
+                    <div class="mt-2">
+                        <img src="https://images.unsplash.com/photo-1562685109-34dee04b4025?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Playa de Croacia" class="img-fluid w-100">
+
+                        <div class="card-body pt-2">
+                            <span><b>26985 Likes</b></span><br>
+                            <span>This is an example of a very good photo that you can post on instagram</span>
+                        </div>
+                    </div>
+                </div>           
+            </div>
+            <!--inicio tarjeta 3-->
+            <div class="container d-flex justify-content-center">
+                <div class="card mb-4" style="max-width: 600px; width: 100%;">
+
+
+                    <div class="d-flex justify-content-between">
+                        <h5 class="p-3">Amazing Goal by Cristiano!</h5>
+                        <span class="p-3">06/10</span>
+                    </div>
+
+                    <div class="mt-2">
+                        <img src="https://www.elespectador.com/resizer/v2/HWP66S5TYVC3BK6MKCDDLGX2QM.jpg?auth=4f23bf025c7522a376352f0d0d790ca5dab8b4512e192eb579ecc38cab6becfc&width=920&height=613&smart=true&quality=60"
+                            alt="Gol de Cristiano Ronaldo Chilena" class="img-fluid w-100">
+
+                        <div class="card-body pt-2">
+                            <span><b>204 Likes</b></span><br>
+                            <span>This is an example of a very good photo that you can post on instagram</span>
+                        </div>
+                    </div>
+                </div>           
+            </div>
+        </div>    
+     <!--Tres fotos-->
+    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+                <div class="container">
+                    <div class="row g-2">
+
+                        <div class="col-4 p-2">
+                           
+                            <img style="height: 30vw; object-fit: cover;"src="https://plus.unsplash.com/premium_photo-1723514553579-b589437b3b06?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZG9nJTIwc3F1YXJlfGVufDB8MnwwfHx8MA%3D%3D" alt="Dog image" class="img-fluid w-100"/>
+                           
+                        </div>
+                        <div class="col-4 p-2">
+                           
+                            <img style="height: 30vw; object-fit: cover;" src="https://images.unsplash.com/photo-1545721264-23fdc0850396?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Torre ifel" class="img-fluid w-100"/>
+                           
+                        </div>
+                        <div class="col-4 p-2">
+                           
+                            <img style="height: 30vw; object-fit: cover;"src="https://plus.unsplash.com/premium_photo-1664478291780-0c67f5fb15e6?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Comida italiana" class="img-fluid w-100"/>
+                           
+                        </div>
+                        <div class="col-4 p-2">
+                           
+                            <img style="height: 30vw; object-fit: cover;"src="https://images.unsplash.com/photo-1740606947209-41e48e994048?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Coliseo Romano" class="img-fluid w-100"/>
+                           
+                        </div>
+                        <div class="col-4 p-2">
+                           
+                            <img style="height: 30vw; object-fit: cover;"src="https://images.unsplash.com/photo-1580752300928-6e1d4ed200c0?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Nueva york" class="img-fluid w-100"/>
+                           
+                        </div>
+                        <div class="col-4 p-2">
+                           
+                            <img style="height: 30vw; object-fit: cover;"src="https://plus.unsplash.com/premium_photo-1676823571650-bae964e7010f?q=80&w=1485&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Interior de casa" class="img-fluid w-100"/>
+                           
+                        </div>
+                        <div class="col-4 p-2">
+                           
+                            <img style="height: 30vw; object-fit: cover;"src="https://images.unsplash.com/photo-1699563745416-31812eeb910f?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Estadio Real Madrid" class="img-fluid w-100"/>
+                           
+                        </div>
+                        <div class="col-4 p-2">
+                           
+                            <img style="height: 30vw; object-fit: cover;" src="https://i.redd.it/bruno-fernandes-lent-ronaldo-his-pair-of-boots-in-the-2nd-v0-1g63mf9j888d1.jpg?width=1242&format=pjpg&auto=webp&s=dd39e1ebb4287ac56e0673ef845577f9d82c402a" alt="Gol de Cristiano Ronaldo" class="img-fluid w-100"/>
+                           
+                        </div>
+                        <div class="col-4 p-2">
+                           
+                            <img style="height: 30vw; object-fit: cover;" src="https://images.unsplash.com/photo-1682147000631-ce4719b04f41?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Observatori Fabra, Barcelona" class="img-fluid w-100"/>
+                           
+                        </div>
+
+                    </div>
+                
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+            </script>
+</body>
+
+</html>
